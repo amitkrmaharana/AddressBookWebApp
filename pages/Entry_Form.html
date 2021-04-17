@@ -27,16 +27,18 @@
                     PERSON ADDRESS FORM
                 </div>
                 <div>
-                    <img class="cross-image" src="\assets\icon\images.png" onclick="cancel()">
+                    <img class="cross-image" src="\assets\icon\images.png">
                 </div>
             </div>
             <div class="row-content">
                 <label class="label text" for="name"></label>
-                <input class="input" type="text" id="full_name" name="full_name" placeholder="Full Name" required>
+                <input class="input" type="text" id="name" name="name" placeholder="Full Name" required>
+                <error-output class="text-error" for="text"></error-output>
             </div>
             <div class="row-content">
                 <label class="label text" for="address"></label>
                 <textarea class="input" type="text" id="address" name="address" placeholder="Address" style="height: 120px;" required></textarea>
+                <error-output class="address-error" for="text"></error-output>
             </div>
             <div class="row-content">
                 <label for="city" class="label text"></label>
@@ -70,10 +72,13 @@
             </div>
             <div class="row-content">
                 <label for="phoneNumber" class="label text"></label>
-                <input type="text" class="input" id="phone_number" name="phone_number" placeholder="Phone Number" required>
+                <input type="text" class="input" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required>
+                <error-output class="phone-error" for="text"></error-output>
             </div>
         </form>
     </div>
+    <script src="\js\AddressBook.js"></script>
+    <script src="\js\contact_form.js"></script>
 </body>
 
 </html>
