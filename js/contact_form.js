@@ -48,13 +48,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 const save = () => {
     let addressBookData = createAddressBook();
-    console.log(addressBookData);
 };
 
 const createAddressBook = () => {
-    console.log("hjggkjhkjhjh");
     let addressBookData = new Contact();
-    console.log("ghfhgffgf");
     addressBookData.name = getInputValueById("#name");
     addressBookData.address = getInputValueById("#address");
     addressBookData.city = getInputValueById("#city");
