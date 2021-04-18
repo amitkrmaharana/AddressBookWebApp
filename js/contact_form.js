@@ -73,10 +73,6 @@ function createAndUpdateStorage(addressBookData) {
     }
     alert(addressBookList.toString());
     localStorage.setItem("AddressBookList", JSON.stringify(addressBookList))
-}
-
-const resetForm = () => {
-    setValue("#name", "");
 };
 
 const getInputValueById = (id) => {
