@@ -75,8 +75,16 @@ function createAndUpdateStorage(addressBookData) {
     localStorage.setItem("AddressBookList", JSON.stringify(addressBookList))
 }
 
+const resetForm = () => {
+    setValue("#name", "");
+};
 
 const getInputValueById = (id) => {
     let values = document.querySelector(id).value;
     return values;
+};
+
+const setValue = (id, value) => {
+    const element = document.querySelector(id);
+    element.value = value;
 };
