@@ -48,10 +48,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 const save = () => {
     let addressBookData = createAddressBook();
+    createAndUpdateStorage(addressBookData);
 };
 
 const createAddressBook = () => {
     let addressBookData = new Contact();
+    addressBookData.id = localStorage.getItem("AddressBookList").length;
     addressBookData.name = getInputValueById("#name");
     addressBookData.address = getInputValueById("#address");
     addressBookData.city = getInputValueById("#city");
@@ -62,7 +64,16 @@ const createAddressBook = () => {
     return addressBookData;
 };
 
-
+function createAndUpdateStorage(addressBookData) {
+    let addressBookList = JSON.parse(localStorage.getItem("AddressBookList"));
+    if (addressBookList != undefined) {
+        addressBookList.push(addressBookData);
+    } else {
+        addressBookList = [addressBookData]
+    }
+    alert(addressBookList.toString());
+    localStorage.setItem("AddressBookList", JSON.stringify(addressBookList))
+}
 
 
 const getInputValueById = (id) => {
