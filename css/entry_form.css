@@ -57,8 +57,6 @@ body {
 .form-head {
     display: flex;
     justify-content: space-between;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
     /* margin-bottom: 10%; */
     background: rgb(4, 151, 209);
     padding: 10px;
@@ -74,10 +72,11 @@ body {
 }
 
 .cross-image {
+    margin-left: 20%;
     display: block;
     margin: 0 auto;
-    width: 20%;
-    height: 50%;
+    width: 37px;
+    height: 35px;
     cursor: pointer;
 }
 
@@ -85,6 +84,7 @@ body {
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
+    padding-top: 20px;
     align-items: center;
 }
 
@@ -132,6 +132,32 @@ error-output {
     font-size: 12px;
     font-style: italic;
     color: red;
+}
+
+.buttonParent {
+    display: flex;
+    margin-bottom: 10px;
+    margin-left: 180px;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.button {
+    font-size: 18px;
+    font-family: Roboto;
+    letter-spacing: 0px;
+    color: black;
+    opacity: 1;
+    font-weight: 450;
+    min-width: 160px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: silver;
+    border: 2px solid slategray;
+}
+
+.addButton {
+    margin-right: 150px;
 }
 
 * {
