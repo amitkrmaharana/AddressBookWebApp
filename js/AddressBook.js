@@ -36,7 +36,7 @@ class Contact {
     }
 
     toString() {
-        return "name=" + this.name + " address=" + this.address + " city=" + this.city + " state=" + this.state +
+        return "id=" + this.id + " name=" + this.name + " address=" + this.address + " city=" + this.city + " state=" + this.state +
             " zip=" + this.zip + " Phone Number=" + this.phoneNumber;
     }
 }

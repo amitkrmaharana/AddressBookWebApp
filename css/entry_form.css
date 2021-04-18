@@ -154,6 +154,7 @@ error-output {
     border-radius: 10px;
     background-color: silver;
     border: 2px solid slategray;
+    cursor: pointer;
 }
 
 .addButton {
