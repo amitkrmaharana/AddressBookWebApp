@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         JSON.parse(localStorage.getItem('AddressBookList')) : [];
     document.querySelector(".contact-count").textContent = addressBookList.length;
     createInnerHtml();
+    localStorage.removeItem('editBook')
 });
 
 const createInnerHtml = () => {
@@ -39,4 +40,11 @@ const remove = (node) => {
     localStorage.setItem("AddressBookList", JSON.stringify(addressBookList));
     document.querySelector(".contact-count").textContent = addressBookList.length;
     createInnerHtml();
+};
+
+const update = (node) => {
+    let addressBookData = addressBookList.find((contact) => contact._id == node.id);
+    if (!addressBookData) return;
+    localStorage.setItem("editBook", JSON.stringify(addressBookData));
+    window.location.replace("../pages/Entry_Form.html");
 };
